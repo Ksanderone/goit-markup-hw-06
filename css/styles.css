@@ -106,6 +106,7 @@ nav > a {
 .link:hover,
 .link:focus {
     color: var(--color-second);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current {
     color: var(--color-second);
@@ -135,7 +136,8 @@ nav > a {
 }
 .contacts:hover,
 .contacts:focus {
-    color: var(--color-second)
+    color: var(--color-second);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container .contacts {
     display: block;
@@ -201,6 +203,7 @@ color: var(--color-second);
 .button:hover,
 .button:focus {
     background-color: var(--color-button);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Заголовки */
 .name {
@@ -357,6 +360,8 @@ color: var(--color-second);
     color: var(--color-hero-name);
     background-color: var(--color-second);
     border-radius: 50%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons {
     fill: currentColor;
@@ -400,6 +405,9 @@ color: var(--color-second);
 .clients-link:focus {
     color: var(--color-second);
     border-color: var(--color-second);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
     fill: currentColor;
@@ -439,6 +447,8 @@ color: var(--color-second);
 .contacts-footer:hover,
 .contacts-footer:focus {
     color: var(--color-second);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts-list {
     margin-top: 9px;
@@ -480,6 +490,8 @@ color: var(--color-second);
     color: var(--color-hero-name);
     background-color: var(--color-second);
     border-radius: 50%;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container.adress-box {
     padding: 0;
@@ -527,6 +539,9 @@ color: var(--color-second);
      0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     color: var(--color-hero-name);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) , 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Картинки портфолио */
 .images-list {
@@ -543,9 +558,11 @@ color: var(--color-second);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .images-all:hover .overlay {
     opacity: 1;
+    transform: translateY(0);
 }
 .images-all:nth-child(3n + 3) {
     margin-right: 0;
@@ -581,6 +598,10 @@ border: 1px solid #EEEEEE;
     width: 100%;
     height: 294px;
     opacity: 0;
+    top: 0;
+    transform: translateY(150%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .overlay-paragraph {
     color: var(--color-hero-name);
@@ -615,6 +636,9 @@ border: 1px solid #EEEEEE;
         to right,
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) , 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
     opacity: 0;
@@ -630,6 +654,7 @@ border: 1px solid #EEEEEE;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-close {
     position: absolute;
