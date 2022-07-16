@@ -729,7 +729,8 @@ border: 1px solid #EEEEEE;
 /* Форма модального окна */
 
 .main-form {
-    padding: 12px 40px 20px 40px;
+    margin: 0 40px 12px ;
+    margin-bottom: 20px;
 }
 .tittle-form {
     font-weight: 700;
@@ -738,7 +739,7 @@ border: 1px solid #EEEEEE;
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 0;
+    margin-bottom: 12px;
 }
 .form-box {
     margin-bottom: 10px;
@@ -753,17 +754,22 @@ border: 1px solid #EEEEEE;
     color: rgba(117, 117, 117, 1);
     margin-bottom: 4px;
 }
-.form-box input {
+.form-input {
     margin: 0;
     padding: 6px 0 6px 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     outline: 0;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 448px;
+    height: 40px;
 }
-.form-box input:hover,
-.form-box input:focus {
+.form-input:hover,
+.form-input:focus {
     border-color: rgba(33, 150, 243, 1);
+}
+.form-input:focus + .social-icons-modal {
+    color: var(--color-second);
 }
 textarea {
     padding: 12px 16px;
@@ -779,7 +785,7 @@ textarea:focus {
 textarea::placeholder {
    color: rgba(117, 117, 117, 0.5);
    font-weight: 400;
-    font-size: 12px;
+   font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
 }
@@ -787,28 +793,40 @@ textarea::placeholder {
     margin-bottom: 30px;
     margin-left: 52px;
     margin-right: 52px;
-    display: flex;
-    align-items: center;
 }
-.form-check label {
-    margin-left: 7px;
+.label {
     font-weight: 400;
     line-height: 1.71;
     color: rgba(117, 117, 117, 1);
+    display: block;
 }
-.form-check input[type='checkbox'] {
+.checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+}
+.icon {
+    display: inline-block;
     width: 16px;
     height: 15px;
-    color: var(--color-primary);
+    margin-right: 7px;
+    border: 2px solid var(--color-primary);
+    border-radius: 2px;
+}
+.checkbox:checked + .icon{
+    background-color: var(--color-second);
+    border: 2px solid var(--color-second);
+    border-radius: 2px;
+    background-image: url(../images/icons.svg#icon-ckeck);
+    
 }
 .word-form {
     color: rgba(33, 150, 243, 1);
     border-bottom: 1px solid var(--color-second);
 }
 .button-form {
-    margin-left: 164px;
-    margin-right: 164px;
-    margin-bottom: 40px;
+    margin: 0 164px 40px;
     background-color: var(--color-second);
     color: var(--color-hero-name);
     border-radius: 4px;
@@ -826,19 +844,19 @@ textarea::placeholder {
 .button-form:hover {
     background-color: rgba(24, 140, 232, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.svg-box {
+    position: relative;
+}
+.svg-box:hover {
+    color: var(--color-second);
+}
+.social-icons-modal {
+    left: 15px;
+    position: absolute;
+    bottom: 14px;
+    display: inline-block;
+    fill: currentColor;
+}
 
 
 textarea {
