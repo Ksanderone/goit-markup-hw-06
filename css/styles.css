@@ -507,6 +507,7 @@ color: var(--color-second);
     display: flex;
 }
 .footer-form input {
+    color: var(--color-hero-name);
     width: 358px;
     font-weight: 400;
     font-size: 16px;
@@ -827,10 +828,10 @@ textarea::placeholder {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-modal-check {
-    width: 16px;
-    height: 15px;
-    color: black;
     
+    flex-shrink: 0;
+    fill: white;
+    background-color: var(--color-second);    
 }
 
 
